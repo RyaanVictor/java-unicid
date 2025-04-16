@@ -1,1 +1,48 @@
-a
+public class Animal {
+    private int id;
+    private String nome;
+    private String especie;
+    private String raca;
+    private int idade;
+    private String cor;
+    private double custoMensal;
+
+    // Getters e Setters
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
+
+    public String getNome() { return nome; }
+    public void setNome(String nome) { this.nome = nome; }
+
+    public String getEspecie() { return especie; }
+    public void setEspecie(String especie) { this.especie = especie; }
+
+    public String getRaca() { return raca; }
+    public void setRaca(String raca) { this.raca = raca; }
+
+    public int getIdade() { return idade; }
+    public void setIdade(int idade) { this.idade = idade; }
+
+    public String getCor() { return cor; }
+    public void setCor(String cor) { this.cor = cor; }
+
+    public double getCustoMensal() { return custoMensal; }
+    public void setCustoMensal(double custoMensal) { this.custoMensal = custoMensal; }
+
+    // Método para calcular custo com margem de lucro (20%)
+    public double calcularValorVenda() {
+        return custoMensal * 1.2;
+    }
+
+    // Método para exibir dados
+    public void exibirDados() {
+        System.out.println("ID: " + id);
+        System.out.println("Nome: " + nome);
+        System.out.println("Espécie: " + especie);
+        System.out.println("Raça: " + raca);
+        System.out.println("Idade: " + idade + " anos");
+        System.out.println("Cor: " + cor);
+        System.out.println("Custo Mensal: R$" + custoMensal);
+        System.out.println("Valor de Venda (com lucro): R$" + calcularValorVenda());
+    }
+}
